@@ -1,0 +1,30 @@
+// ? defining sizes
+$paddingSizes: (
+  xs: .5em,
+  sm: 1em,
+  md: 1.5em,
+  lg: 2em,
+  xl: 2.5em
+);
+
+$paddingSides: (
+  left: 'left',
+  right: 'right',
+  top: 'top',
+  bottom: 'bottom'
+);
+
+@mixin padding($side: all, $size: sm){
+  @if map-has-key($map: $paddingSizes, $key: $size) {
+    // ? if the side is one of $paddingSides map values 
+    @if map-has-key($map: $paddingSides, $key: $side) {
+      
+      padding-#{$side}: map-get($paddingSizes, $size);
+
+    } @else { // ? else apply the padding on every side
+
+      padding: map-get($paddingSizes, $size);
+    
+    }
+  }
+}

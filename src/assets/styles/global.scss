@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+@import "mixins/rounded";
+@import "mixins/padding";
+@import "mixins/shadow";
+
+
+// ? theme - colors
+$primary: #F7AEF8;
+$secondary: #B388EB;
+$terciary: #F4F4ED;
+$contrast: #8093F1;
+
+// ? state - colors
+$success: #66bb6a;
+$info: #1e88e5;
+$warning: #fbc02d;
+$danger: #d32f2f;
+
+// ? text - colors
+$light-text: #fff;
+$dark-text: #333333;
+
+$font-family: 'Poppins', sans-serif;
+

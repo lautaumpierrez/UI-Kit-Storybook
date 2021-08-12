@@ -1,0 +1,29 @@
+// ? defining sizes
+$roundingSize: (
+  sm: 5px,
+  md: 10px,
+  lg: 20px,
+  full: 50%
+);
+
+$roundingSides: (
+  top-left: ' top-left',
+  top-right: ' top-right',
+  bottom-left: 'bottom-left',
+  bottom-right: 'bottom-right',
+);
+
+@mixin rounded($side: all, $size: sm){
+  @if map-has-key($map: $roundingSize, $key: $size) {
+    // ? if the side is one of $roundingSides 
+    @if map-has-key($map: $roundingSides, $key: $side) {
+
+      border-#{$side}-radius: map-get($roundingSize, $size);  
+   
+    } @else { // ? else set rounding to every border.
+   
+      border-radius: map-get($roundingSize, $size);  
+   
+    }
+  }
+} 

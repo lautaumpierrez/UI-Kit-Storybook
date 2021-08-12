@@ -1,0 +1,42 @@
+@import "../../assets/styles/global";
+
+.InputContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  .Input {
+    @include rounded("all","sm");
+    @include padding("all","sm");
+    @include shadow("lg");
+    
+    outline: none;
+    border: none;
+    width: 100%;
+    font-family: $font-family;
+    flex-grow: 1;
+    &.primary {
+      background-color: transparentize($primary, 0.3);
+    } 
+    
+    &.secondary {
+      background-color: transparentize($secondary, 0.3);
+      color: $light-text;
+      &::placeholder {
+        color: transparentize($light-text, .3);
+      }
+    }
+    
+    &.terciary {
+      background-color: transparentize($terciary, 0.2);
+    } 
+    
+    &.contrast {
+      background-color: transparentize($contrast, 0.2);
+      color: $light-text;
+      &::placeholder {
+        color: transparentize($light-text, .3);
+      }
+    } 
+  } 
+} 
+
