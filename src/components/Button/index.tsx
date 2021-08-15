@@ -9,7 +9,7 @@ import './Button.style.scss';
 function Button({ children, variant, className, ...props }: ButtonProps): JSX.Element {
   const classes = useClasses('Button', variant, className);
 
-  return <button className={classes} {...props}>{children}</button>
+  return <button data-testid="button" className={classes} {...props}>{children}</button>
 }
 
 Button.defaultProps = {

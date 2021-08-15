@@ -3,4 +3,5 @@ import { StateColors, ThemeColors } from "../../types/Theme.types";
 
 export interface ButtonProps extends React.HTMLAttributes<HTMLButtonElement> {
   variant?: ThemeColors | StateColors;
+  children: React.ReactNode;
 }

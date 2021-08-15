@@ -12,14 +12,14 @@ function Input({ variant, className, trigger, ...rest }: InputProps) {
 
   return (
     <div className="InputContainer">
-      <input className={classes} {...rest} />
+      <input data-testid="input" className={classes} {...rest} />
       {trigger}
     </div>
   )
 }
 
 Input.defaultProps = {
-  variant: 'primary'
+  variant: 'contrast'
 }
 
 export default Input;
