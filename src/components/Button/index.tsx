@@ -13,7 +13,7 @@ function Button({ children, variant, className, ...props }: ButtonProps): JSX.El
 }
 
 Button.defaultProps = {
-  variant: 'primary'
+  variant: 'primary',
 };
 
 export default Button;
